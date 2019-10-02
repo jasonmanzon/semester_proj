@@ -7,8 +7,7 @@
   <p style="text-align:center;">Travel!</p>
 
 <link href="gps-css.css" rel="stylesheet"> 
-<link href="mouse.css" rel="stylesheet"> 
-<link href="mouse.js" rel="stylesheet"> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
 
 <style>
 .container {
@@ -26,7 +25,6 @@
   padding-left: 20px;
   padding-right: 20px;
 }
-
 
 .centered {
   position: absolute;
@@ -46,12 +44,34 @@
   left: 1200px;
 }
 
-.trail { /* className for the trail elements */
-    position: absolute;
-    height: 6px; width: 6px;
-    border-radius: 3px;
-    background: teal;
-  }
+.traffic {
+  position: absolute;  
+  top: 659px;
+  left: 1400px;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 
 </style>
 
@@ -65,82 +85,20 @@
 
 <body>
 
+
+
+
+<a href='https://www.freecodecamp.org/'><button class="button">GPS Satelleites</button></a>
+
 <div class="w3-container">
  
 
+   <img style="position:absolute; TOP:250px; LEFT:625px; WIDTH:1200px; HEIGHT:700px" src="https://raw.githubusercontent.com/jasonmanzon/semester-project/master/Background.JPG" alt="Nature" > 
 
+<img style="position:absolute; TOP:0px; LEFT:300px; WIDTH:500px; HEIGHT:950px" src="https://raw.githubusercontent.com/jasonmanzon/semester_proj/master/GPS.gif" alt="Nature" > 
 
-   <img STYLE="position:absolute; TOP:250px; LEFT:625px; WIDTH:1200px; HEIGHT:700px" src="https://raw.githubusercontent.com/jasonmanzon/semester-project/master/Background.JPG" alt="Nature" > 
-
-   <script> 
-var dots = [],
-    mouse = {
-      x: 1,
-      y: 1,
-    };
-
-// The Dot object used to scaffold the dots
-var Dot = function() {
-  this.x = 0;
-  this.y = 0;
-  this.node = (function(){
-    var n = document.createElement("div");
-    n.className = "trail";
-    document.body.appendChild(n);
-    return n;
-  }());
-};
-// The Dot.prototype.draw() method sets the position of 
-  // the object's <div> node
-Dot.prototype.draw = function() {
-  this.node.style.left = this.x + "px";
-  this.node.style.top = this.y + "px";
-};
-
-// Creates the Dot objects, populates the dots array
-for (var i = 0; i < 12; i++) {
-  var d = new Dot();
-  dots.push(d);
-}
-
-// This is the screen redraw function
-function draw() {
-  // Make sure the mouse position is set everytime
-    // draw() is called.
-  var x = mouse.x,
-      y = mouse.y;
+<img style="position:absolute; TOP:400px; LEFT:1700px; WIDTH:500px; HEIGHT:950px" src="https://raw.githubusercontent.com/jasonmanzon/semester_proj/master/GPS.gif" alt="Nature" > 
   
-  // This loop is where all the 90s magic happens
-  dots.forEach(function(dot, index, dots) {
-    var nextDot = dots[index + 1] || dots[0];
-    
-    dot.x = x;
-    dot.y = y;
-    dot.draw();
-    x += (nextDot.x - dot.x) * .9;
-    y += (nextDot.y - dot.y) * .9;
-
-  });
-}
-
-addEventListener("mousemove", function(event) {
-  //event.preventDefault();
-  mouse.x = event.pageX;
-  mouse.y = event.pageY;
-});
-
-// animate() calls draw() then recursively calls itself
-  // everytime the screen repaints via requestAnimationFrame().
-function animate() {
-  draw();
-  requestAnimationFrame(animate);
-}
-
-// And get it started by calling animate().
-animate();
-
-
-</script>
 
 <div class="centered">
  <div class="w3-dropdown-hover">
@@ -179,6 +137,21 @@ animate();
       <img src="https://raw.githubusercontent.com/jasonmanzon/semester-project/master/location.jpg" alt="London" style="width:100%">
       <div class="w3-container">
         <p>Google automatically has access to your location data when the Google Maps application is installed. With your location data, Google is able to use your data for calculating real-time traffic, estimating traffic speeds, and pinpointing road diversions. For example, if a busy route suddenly has no traffic then Maps will assume that there’s an accident or diversion and will adjust directions accordingly on the individuals apps. Google has been tracking data for many years and the information that is being used is over three years older. </p>
+   
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="traffic">
+ <div class="w3-dropdown-hover">
+  	Traffic
+    <div class="w3-dropdown-content w3-card-4" style="width:250px">
+      <img src="https://raw.githubusercontent.com/jasonmanzon/semester_proj/master/traffic.png" alt="London" style="width:100%">
+      <div class="w3-container">
+        <p>Google Maps is not only able to present the user the distance it will be from their point A to point B destination, but can also estimate the time it would take to get to the destination. Also taking in consideration with traffic. Google hasn't been released to the public how they get these calculations. But it is important to note that when a distance is tracked in Google Maps, the system is only taking an estimation because it doesn’t take into consideration the driving speed of the individual or unexpected conditions.  </p>
    
       </div>
     </div>
