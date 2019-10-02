@@ -1,0 +1,84 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+	<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+<a-scene>
+
+                      
+
+
+
+
+<a-assets>
+    <img id="sky" src="https://cdn.eso.org/images/screen/eso0932a.jpg">
+  </a-assets>
+  <a-sky src="#sky"></a-sky>
+
+
+
+
+
+
+                
+<a-entity id="moon">
+                    <a-sphere radius="0.2" color="white" position="3 2.5 -2"
+                        src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/moon_1024.jpg">
+                        <a-animation attributes="rotation"
+                            to="0 360 0"
+                            dur="4000"
+                            easing="linear"
+                            repeat="indefinite"></a-animation>
+                    </a-sphere>
+                    <a-animation attribute="rotation"
+                        to="0 360 0"
+                        dur="112000"
+                        easing="linear"
+                        repeat="indefinite"></a-animation>
+                </a-entity>
+            </a-entity>
+            <a-animation attribute="rotation"
+                to="0 360 0"
+                dur="100000"
+                easing="linear"
+                repeat="indefinite"></a-animation>
+        </a-entity>
+        
+   
+   
+   <a-entity id="earth">
+            <a-entity position="0 0 0">
+                <a-entity id="earth">
+                    <a-sphere radius="1"
+                        position="0 0 0"
+                        rotation="0 0 0"
+                        src="https://ucarecdn.com/95342267-8307-4dd9-9356-42c7fae44bdb/">
+                    </a-sphere>
+                    <a-animation attribute="rotation"
+                        to="0 360 0"
+                        dur="10000"
+                        easing="linear"
+                        repeat="indefinite"></a-animation>
+                </a-entity>
+   
+   
+ <a-camera position='0 0 4' user-height='0'>
+  </a-camera>
+
+  
+
+<a-light color="white" position="1 0 0" intensity="2.5" distance="5" ></a-light>
+<a-light type="ambient" color="white" position="-1 -2 0.5" intensity="1" distance="10" ></a-light>
+      
+
+</a-scene>
+
+
+</body>
+
+</html> 
