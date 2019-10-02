@@ -9,6 +9,7 @@
 <link href="gps-css.css" rel="stylesheet"> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
 
+
 <style>
 .container {
   position: relative;
@@ -22,8 +23,8 @@
   right: 20px;
   background-color: black;
   color: white;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .centered {
@@ -50,27 +51,24 @@
   left: 1400px;
 }
 
-.button {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
+.GPS {
+  position: absolute;  
+  top: 420px;
+  left: 850px;
 }
 
-.button:hover {background-color: #3e8e41}
+.button5 {
+	position: absolute; 
+	 top: 140px;
+  left: 1125px;
+  background-color: #FF5B5B;
+  color: white;
+  border: 2px solid #555555;
+}
 
-.button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+.button5:hover {
+  background-color: #555555;
+  color: white;
 }
 
 </style>
@@ -87,18 +85,30 @@
 
 
 
-
-<a href='https://jasonmanzon.github.io/semester_proj/orbit.html'><button class="button">GPS Satelleites</button></a>
+<a href='https://jasonmanzon.github.io/semester_proj/orbit.html'><button class="button button5">GPS Satellites</button></a>
 
 <div class="w3-container">
  
 
-   <img style="position:absolute; TOP:250px; LEFT:625px; WIDTH:1200px; HEIGHT:700px" src="https://raw.githubusercontent.com/jasonmanzon/semester-project/master/Background.JPG" alt="Nature" > 
+ <img style="position:absolute; TOP:250px; LEFT:625px; WIDTH:1200px; HEIGHT:700px" src="https://raw.githubusercontent.com/jasonmanzon/semester-project/master/Background.JPG" alt="Nature" > 
 
 <img style="position:absolute; TOP:0px; LEFT:300px; WIDTH:500px; HEIGHT:950px" src="https://raw.githubusercontent.com/jasonmanzon/semester_proj/master/GPS.gif" alt="Nature" > 
 
-<img style="position:absolute; TOP:400px; LEFT:1700px; WIDTH:500px; HEIGHT:950px" src="https://raw.githubusercontent.com/jasonmanzon/semester_proj/master/GPS.gif" alt="Nature" > 
+<img style="position:absolute; TOP:600px; LEFT:1300px; WIDTH:500px; HEIGHT:950px" src="https://raw.githubusercontent.com/jasonmanzon/semester_proj/master/GPS.gif" alt="Nature" > 
+
+<img style="position:absolute; TOP:-20px; LEFT:1700px; WIDTH:500px; HEIGHT:950px" src="https://raw.githubusercontent.com/jasonmanzon/semester_proj/master/GPS.gif" alt="Nature" > 
   
+
+ <img style="position:absolute; TOP:400px; LEFT:870px; WIDTH:50px; HEIGHT:50px" src="https://raw.githubusercontent.com/jasonmanzon/semester_proj/master/map.png" alt="Nature" > 
+
+ <img style="position:absolute; TOP:640px; LEFT:1430px; WIDTH:50px; HEIGHT:50px" src="https://raw.githubusercontent.com/jasonmanzon/semester_proj/master/map.png" alt="Nature" > 
+
+  <img style="position:absolute; TOP:570px; LEFT:1170px; WIDTH:50px; HEIGHT:50px" src="https://raw.githubusercontent.com/jasonmanzon/semester_proj/master/map.png" alt="Nature" > 
+
+<img style="position:absolute; TOP:470px; LEFT:1050px; WIDTH:50px; HEIGHT:50px" src="https://raw.githubusercontent.com/jasonmanzon/semester_proj/master/map.png" alt="Nature" > 
+
+<img style="position:absolute; TOP:770px; LEFT:1350px; WIDTH:50px; HEIGHT:50px" src="https://raw.githubusercontent.com/jasonmanzon/semester_proj/master/map.png" alt="Nature" > 
+
 
 <div class="centered">
  <div class="w3-dropdown-hover">
@@ -152,6 +162,24 @@
       <img src="https://raw.githubusercontent.com/jasonmanzon/semester_proj/master/traffic.png" alt="London" style="width:100%">
       <div class="w3-container">
         <p>Google Maps is not only able to present the user the distance it will be from their point A to point B destination, but can also estimate the time it would take to get to the destination. Also taking in consideration with traffic. Google hasn't been released to the public how they get these calculations. But it is important to note that when a distance is tracked in Google Maps, the system is only taking an estimation because it doesn’t take into consideration the driving speed of the individual or unexpected conditions.  </p>
+   
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="GPS">
+ <div class="w3-dropdown-hover">
+  	GPS
+    <div class="w3-dropdown-content w3-card-4" style="width:250px">
+      <img src="https://raw.githubusercontent.com/jasonmanzon/semester_proj/master/pinpoint.png" alt="London" style="width:100%">
+      <div class="w3-container">
+        <p>There are about 30 Satellites orbiting the Earth at an altitude of 20,000 km. The Global Positioning System (GPS), was originally created by the US government for military navigation but anyone with a GPS device can receive the radio signals that these satellites broadcast.</p>
+		<p>
+		Wherever an individual is on the planet, there are at least four GPS Satellites that are ‘visible’ at any time. Each satellite transmits information about its position and current time at regular intervals. These signals are intercepted by our GPS receiver (mobile devices) and will calculate how far away each satellite is based on how long it took to receive the message. 
+		</p>
    
       </div>
     </div>
