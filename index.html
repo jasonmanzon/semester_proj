@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<h2 style="text-align:center;">Google Maps/ GPS</h2>
+  <p style="text-align:center;">Travel!</p>
+
+<link href="gps-css.css" rel="stylesheet"> 
+<link href="mouse.css" rel="stylesheet"> 
+<link href="mouse.js" rel="stylesheet"> 
+
+<style>
+.container {
+  position: relative;
+  text-align: center;
+  font-family: Arial;
+}
+
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.centered {
+  position: absolute;
+  top: 800px;
+  left: 1300px;
+}
+
+.partners {
+  position: absolute;
+  top: 500px;
+  left: 1000px;
+}
+
+.location {
+  position: absolute;  
+  top: 600px;
+  left: 1200px;
+}
+
+.trail { /* className for the trail elements */
+    position: absolute;
+    height: 6px; width: 6px;
+    border-radius: 3px;
+    background: teal;
+  }
+
+</style>
+
+
+</head>
+<title>Google Maps/GPS</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body>
+
+<div class="w3-container">
+ 
+
+
+
+   <img STYLE="position:absolute; TOP:250px; LEFT:625px; WIDTH:1200px; HEIGHT:700px" src="https://raw.githubusercontent.com/jasonmanzon/semester-project/master/Background.JPG" alt="Nature" > 
+
+   <script> 
+var dots = [],
+    mouse = {
+      x: 1,
+      y: 1,
+    };
+
+// The Dot object used to scaffold the dots
+var Dot = function() {
+  this.x = 0;
+  this.y = 0;
+  this.node = (function(){
+    var n = document.createElement("div");
+    n.className = "trail";
+    document.body.appendChild(n);
+    return n;
+  }());
+};
+// The Dot.prototype.draw() method sets the position of 
+  // the object's <div> node
+Dot.prototype.draw = function() {
+  this.node.style.left = this.x + "px";
+  this.node.style.top = this.y + "px";
+};
+
+// Creates the Dot objects, populates the dots array
+for (var i = 0; i < 12; i++) {
+  var d = new Dot();
+  dots.push(d);
+}
+
+// This is the screen redraw function
+function draw() {
+  // Make sure the mouse position is set everytime
+    // draw() is called.
+  var x = mouse.x,
+      y = mouse.y;
+  
+  // This loop is where all the 90s magic happens
+  dots.forEach(function(dot, index, dots) {
+    var nextDot = dots[index + 1] || dots[0];
+    
+    dot.x = x;
+    dot.y = y;
+    dot.draw();
+    x += (nextDot.x - dot.x) * .9;
+    y += (nextDot.y - dot.y) * .9;
+
+  });
+}
+
+addEventListener("mousemove", function(event) {
+  //event.preventDefault();
+  mouse.x = event.pageX;
+  mouse.y = event.pageY;
+});
+
+// animate() calls draw() then recursively calls itself
+  // everytime the screen repaints via requestAnimationFrame().
+function animate() {
+  draw();
+  requestAnimationFrame(animate);
+}
+
+// And get it started by calling animate().
+animate();
+
+
+</script>
+
+<div class="centered">
+ <div class="w3-dropdown-hover">
+  	Satellites
+    <div class="w3-dropdown-content w3-card-4" style="width:250px">
+      <img src="https://raw.githubusercontent.com/jasonmanzon/semester-project/master/satellites.jpg" alt="London" style="width:100%">
+      <div class="w3-container">
+        <p>Google Maps is in collaboration with Google Earth, where they would compile images of Earth through their satellites. Images are also re-evaluated with other data to make sure that if there any geological changes, Google Maps will pick it up and adjust to the changes.</p>
+   
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="partners">
+ <div class="w3-dropdown-hover">
+  	Partners
+    <div class="w3-dropdown-content w3-card-4" style="width:250px">
+      <img src="https://raw.githubusercontent.com/jasonmanzon/semester-project/master/partners.jpg" alt="London" style="width:100%">
+      <div class="w3-container">
+        <p>Google Maps collects data 24/7 to maintain and make sure that every stays up to date. Google has partnered with many agencies that send over detailed vector data to Google. Agencies such as the US National Park Service, the US Geological Survey, the USDA Forest Service, city and county councils, and more, submit data to Google. </p>
+   
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="location">
+ <div class="w3-dropdown-hover">
+  	Location
+    <div class="w3-dropdown-content w3-card-4" style="width:250px">
+      <img src="https://raw.githubusercontent.com/jasonmanzon/semester-project/master/location.jpg" alt="London" style="width:100%">
+      <div class="w3-container">
+        <p>Google automatically has access to your location data when the Google Maps application is installed. With your location data, Google is able to use your data for calculating real-time traffic, estimating traffic speeds, and pinpointing road diversions. For example, if a busy route suddenly has no traffic then Maps will assume that there’s an accident or diversion and will adjust directions accordingly on the individuals apps. Google has been tracking data for many years and the information that is being used is over three years older. </p>
+   
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+</body>
+</html>
