@@ -11,7 +11,90 @@
 <a-scene>
 
                       
+                                  <a-assets>
+                                    <a-asset-item id="object"src="https://cdn.glitch.com/eb31b93c-f547-4067-be09-14bd9a5ef1e9%2FSatellite.obj?v=1575318896149">
+                                      
 
+                                  </a-assets>
+                                  
+
+                                      <a-obj-model src="#object" mtl="#material"  position="-1 -0.5 1" scale="0.4 0.4 0.4">
+
+                                        <a-animation attribute="rotation"
+                        to="0 360 360"
+                        dur="2000"
+                        easing="linear"
+                        repeat="indefinite">
+                                        </a-animation>
+                                    
+                                  </a-obj-model>
+
+                                  <a-assets>
+                                    <a-asset-item id="object"src="https://cdn.glitch.com/eb31b93c-f547-4067-be09-14bd9a5ef1e9%2FSatellite.obj?v=1575318896149">
+                                  </a-assets>
+
+                                      <a-obj-model src="#object" mtl="#material"  position="1 1.5 -0.5" scale="0.4 0.4 0.4">
+                                        <a-animation attribute="rotation" to="360 0 720"
+                                            repeat="indefinite"
+                                            easing="linear"
+                                            dur="5000">    
+                                        </a-animation>
+                                    
+                                  </a-obj-model>
+
+
+                                <a-assets>
+                                    <a-asset-item id="object" src="https://cdn.glitch.com/eb31b93c-f547-4067-be09-14bd9a5ef1e9%2FSatellite.obj?v=1575318896149">
+                                  </a-assets>
+
+                                      <a-obj-model src="#object" mtl="#material"  position="1.7 -0.7 -0.8" scale="0.4 0.4 0.4">
+                                        <a-animation attribute="rotation" to="360 0 720"
+                                            repeat="indefinite"
+                                            easing="linear"
+                                            dur="5000">    
+                                        </a-animation>
+                                    
+                                  </a-obj-model>
+
+                                  <a-assets>
+                                    <a-asset-item id="object" src="https://cdn.glitch.com/eb31b93c-f547-4067-be09-14bd9a5ef1e9%2FSatellite.obj?v=1575318896149">
+                                  </a-assets>
+
+                                      <a-obj-model src="#object" mtl="#material"  position="2 1 -1" scale="0.1 0.1 0.1">
+                                        <a-animation attribute="rotation" to="60 0 360"
+                                            repeat="indefinite"
+                                            easing="linear"
+                                            dur="5000">    
+                                        </a-animation>
+                                    
+                                  </a-obj-model>
+
+                                   <a-assets>
+                                    <a-asset-item id="object" src="https://cdn.glitch.com/eb31b93c-f547-4067-be09-14bd9a5ef1e9%2FSatellite.obj?v=1575318896149">
+                                  </a-assets>
+
+                                      <a-obj-model src="#object" mtl="#material"  position="-2 -1 1" scale="0.1 0.1 0.1">
+                                        <a-animation attribute="rotation" to="300 360 0"
+                                            repeat="indefinite"
+                                            easing="linear"
+                                            dur="5000">    
+                                        </a-animation>
+                                    
+                                  </a-obj-model>
+
+                                  <a-assets>
+                                    <a-asset-item id="object" src="https://cdn.glitch.com/eb31b93c-f547-4067-be09-14bd9a5ef1e9%2FSatellite.obj?v=1575318896149">
+                                  </a-assets>
+
+                                      <a-obj-model src="#object" mtl="#material"  position="1 -1 1.7" scale="0.1 0.1 0.1">
+                                        <a-animation attribute="rotation" to="30 32 360"
+                                            repeat="indefinite"
+                                            easing="linear"
+                                            dur="5000">    
+                                        </a-animation>
+                                    
+                                  </a-obj-model>
+                            
 
 
 
@@ -21,7 +104,7 @@
   <a-sky src="#sky"></a-sky>
 
 
-
+ 
 
 
 
@@ -29,6 +112,8 @@
 <a-entity id="moon">
                     <a-sphere radius="0.2" color="white" position="3 2.5 -2"
                         src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/moon_1024.jpg">
+
+
                         <a-animation attributes="rotation"
                             to="0 360 0"
                             dur="4000"
@@ -40,6 +125,8 @@
                         dur="112000"
                         easing="linear"
                         repeat="indefinite"></a-animation>
+
+
                 </a-entity>
             </a-entity>
             <a-animation attribute="rotation"
@@ -49,6 +136,7 @@
                 repeat="indefinite"></a-animation>
         </a-entity>
         
+
    
    
    <a-entity id="earth">
@@ -58,6 +146,8 @@
                         position="0 0 0"
                         rotation="0 0 0"
                         src="https://ucarecdn.com/95342267-8307-4dd9-9356-42c7fae44bdb/">
+
+
                     </a-sphere>
                     <a-animation attribute="rotation"
                         to="0 360 0"
@@ -66,14 +156,18 @@
                         repeat="indefinite"></a-animation>
                 </a-entity>
 
-    <a-entity animation="property: rotation; dur: 10000; easing: linear; loop: true; from:0 0 360; to: 0 0 0;">
-                <a-entity gltf-model="url(https://cdn.jsdelivr.net/gh/jasonmanzon/ar-gps@master/satellite2.gltf)" scale="0.04 0.04 0.04" position="-2.5 0.5 1">
-        
-            </a-entity>
+
    
-   
- <a-camera position='0 0 4' user-height='0'>
+ <a-animation attribute="rotation" to="0 360 0" dur="30000" easing="linear" repeat="indefinite"></a-animation>
+
+
+  <a-camera position="0 0 4" user-height="0" rotation="" scale="" visible="" camera="" look-controls="" wasd-controls="">
+         <a-sound src="url(https://raw.githubusercontent.com/jasonmanzon/semester_proj/master/pings.mp3)" autoplay="true" position="0 0 0" loop="true" volume="0.5" rotation="" scale="" visible="" sound=""></a-sound>
+
+
   </a-camera>
+
+
 
   
 
